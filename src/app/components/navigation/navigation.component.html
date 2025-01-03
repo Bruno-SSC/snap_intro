@@ -1,0 +1,61 @@
+<section class="header">
+  <div class="brand_logo">
+    <div class="brand_logo__img_container">
+      <img
+        class="brand_logo__img_content"
+        src="/assets/images/logo.svg"
+        alt="snap brand logo"
+      />
+    </div>
+  </div>
+
+  <div class="menu_icon" (click)="menu_visible = true">
+    <div class="menu_icon__icon_container">
+      <img
+        class="menu_icon__icon_content"
+        src="/assets/images/icon-menu.svg"
+        alt="menu icon"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="side_menu" *ngIf="menu_visible">
+  <div (click)="menu_visible = false" class="menu_icon menu_icon--close">
+    <div class="menu_icon__icon_container">
+      <img
+        class="menu_icon__icon_content"
+        src="/assets/images/icon-close-menu.svg"
+        alt="menu icon"
+      />
+    </div>
+  </div>
+
+  <div class="navigation">
+    <nav class="navigation__menu">
+      <li class="navigation__item">
+        <span> Features </span>
+        <img
+          class="navigation__arrow_down"
+          src="/assets/images/icon-arrow-down.svg"
+          alt="feature arrow down icon"
+        />
+      </li>
+      <li class="navigation__item">
+        <span>Company </span>
+        <img
+          class="navigation__arrow_down"
+          src="/assets/images/icon-arrow-down.svg"
+          alt="feature arrow down icon"
+        />
+      </li>
+      <li class="navigation__item">Careers</li>
+      <li class="navigation__item">About</li>
+    </nav>
+  </div>
+
+  <div class="user_auth">
+    <div class="user_auth__login">Login</div>
+    <div class="user_auth__register">Register</div>
+  </div>
+</section>

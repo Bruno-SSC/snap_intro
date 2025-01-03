@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
+@import "variables.scss";
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 18px;
+  font-family: "Epilogue", serif;
+  font-optical-sizing: auto;
+  background-color: $almost_white;
+}
