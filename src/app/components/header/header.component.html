@@ -1,0 +1,27 @@
+<ng-template #mobile_header>
+  <section class="header">
+    <app-brand-logo></app-brand-logo>
+
+    <div class="menu_icon" (click)="toggle_sidemenu()">
+      <div class="menu_icon__icon_container">
+        <img
+          class="menu_icon__icon_content"
+          src="/assets/images/icon-menu.svg"
+          alt="menu icon"
+        />
+      </div>
+    </div>
+  </section>
+</ng-template>
+
+<ng-template #desktop_header>
+  <section class="header">
+    <app-brand-logo></app-brand-logo>
+    <app-navigation></app-navigation>
+    <app-userauth-btns></app-userauth-btns>
+  </section>
+</ng-template>
+
+<ng-container
+  *ngTemplateOutlet="check_device('mobile') ? mobile_header : desktop_header"
+></ng-container>

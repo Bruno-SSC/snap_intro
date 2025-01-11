@@ -1,0 +1,14 @@
+<section class="side_menu" *ngIf="menu_visible">
+  <div (click)="close_menu()" class="menu_icon menu_icon--close">
+    <div class="menu_icon__icon_container">
+      <img
+        class="menu_icon__icon_content"
+        src="/assets/images/icon-close-menu.svg"
+        alt="menu icon"
+      />
+    </div>
+  </div>
+
+  <app-navigation></app-navigation>
+  <app-userauth-btns></app-userauth-btns>
+</section>

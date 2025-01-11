@@ -1,0 +1,24 @@
+@import "variables.scss";
+
+.user_auth {
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.user_auth__login {
+  margin-bottom: 10px;
+}
+
+.user_auth__login,
+.user_auth__register {
+  padding: 10px;
+  width: 100%;
+  color: $medium_gray;
+  font-weight: 500;
+  border-radius: 15px;
+}
+
+.user_auth__register {
+  border: 2px solid $medium_gray;
+}

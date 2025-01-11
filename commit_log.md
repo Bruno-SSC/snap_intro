@@ -3,3 +3,6 @@ com0
 com1
     Finished the mobile. Not responsive/animated. 
 com2
+    Created isolated components for reusable components. Also created a service to manage device and sidemenu state with Subjects to update components that might need this data.
+   
+
