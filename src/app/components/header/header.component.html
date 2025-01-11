@@ -1,6 +1,18 @@
+<ng-template #brand_logo>
+  <div class="brand_logo">
+    <div class="brand_logo__img_container">
+      <img
+        class="brand_logo__img_content"
+        src="/assets/images/logo.svg"
+        alt="snap brand logo"
+      />
+    </div>
+  </div>
+</ng-template>
+
 <ng-template #mobile_header>
   <section class="header">
-    <app-brand-logo></app-brand-logo>
+    <ng-container *ngTemplateOutlet="brand_logo"></ng-container>
 
     <div class="menu_icon" (click)="toggle_sidemenu()">
       <div class="menu_icon__icon_container">
@@ -16,7 +28,7 @@
 
 <ng-template #desktop_header>
   <section class="header">
-    <app-brand-logo></app-brand-logo>
+    <ng-container *ngTemplateOutlet="brand_logo"></ng-container>
     <app-navigation></app-navigation>
     <app-userauth-btns></app-userauth-btns>
   </section>

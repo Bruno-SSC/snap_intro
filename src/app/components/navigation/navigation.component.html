@@ -1,3 +1,41 @@
+<ng-template #features_dropdown>
+  <li class="navigation__item navigation__item--hidden">
+    <img
+      class="dropdown_menu__icon"
+      src="/assets/images/icon-todo.svg"
+      alt="todo icon"
+    />
+    <span class="dropdown_menu__title"> Todo List </span>
+  </li>
+
+  <li class="navigation__item navigation__item--hidden">
+    <img
+      class="dropdown_menu__icon"
+      src="/assets/images/icon-calendar.svg"
+      alt="calendar icon"
+    />
+    <span class="dropdown_menu__title"> Calendar </span>
+  </li>
+
+  <li class="navigation__item navigation__item--hidden">
+    <img
+      class="dropdown_menu__icon"
+      src="/assets/images/icon-reminders.svg"
+      alt="reminders icon"
+    />
+    <span class="dropdown_menu__title"> Reminder </span>
+  </li>
+
+  <li class="navigation__item navigation__item--hidden">
+    <img
+      class="dropdown_menu__icon"
+      src="/assets/images/icon-planning.svg"
+      alt="planning icon"
+    />
+    <span class="dropdown_menu__title"> Planning </span>
+  </li>
+</ng-template>
+
 <div class="navigation">
   <nav class="navigation__menu">
     <li class="navigation__item" (click)="toggle_dropdown('features')">
@@ -10,7 +48,9 @@
     </li>
 
     <ng-container *ngIf="dropdown['features']">
-      <app-features-dropdown></app-features-dropdown>
+      <div class="modal_box" *ngIf="check_device('desktop')">
+        <ng-container *ngTemplateOutlet="features_dropdown"></ng-container>
+      </div>
     </ng-container>
 
     <li class="navigation__item" (click)="toggle_dropdown('company')">
@@ -23,7 +63,17 @@
     </li>
 
     <ng-container *ngIf="dropdown['company']">
-      <app-company-dropdown></app-company-dropdown>
+      <li class="navigation__item navigation__item--hidden">
+        <span>History </span>
+      </li>
+
+      <li class="navigation__item navigation__item--hidden">
+        <span>Our Team </span>
+      </li>
+
+      <li class="navigation__item navigation__item--hidden">
+        <span>Blog </span>
+      </li>
     </ng-container>
 
     <li class="navigation__item">Careers</li>

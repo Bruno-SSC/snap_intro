@@ -2,9 +2,25 @@
 @import "mixins.scss";
 
 .navigation__item {
-  @include navigation_item;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: $medium_gray;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .navigation__item--hidden {
-  @include navigation_item--hidden;
+  padding-left: 30px;
+}
+
+@media screen and (min-width: 769px) {
+  .navigation__menu {
+    display: flex;
+  }
+
+  .modal_box{
+    //! if this will be absolute, what will be relative? The navigation_menu. Which means adjusting this modal automatically below features/company won't be possible
+  }
 }

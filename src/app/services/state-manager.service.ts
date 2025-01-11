@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 
-type device_type = 'mobile' | 'tablet' | 'desktop';
+export type device_type = 'mobile' | 'tablet' | 'desktop';
 
 @Injectable({
   providedIn: 'root',

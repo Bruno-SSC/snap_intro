@@ -7,3 +7,16 @@
   width: 100vw;
   padding: 20px;
 }
+
+@media screen and (min-width: 769px) {
+  .header {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+    padding: 20px 50px;
+  }
+
+  .brand_logo{
+    margin-top: 10px;
+  }
+}

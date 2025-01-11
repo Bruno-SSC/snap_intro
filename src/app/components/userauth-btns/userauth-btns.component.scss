@@ -1,5 +1,10 @@
 @import "variables.scss";
 
+:host {
+  display: block;
+  width: 100%;
+}
+
 .user_auth {
   width: 100%;
   text-align: center;
@@ -8,6 +13,19 @@
 
 .user_auth__login {
   margin-bottom: 10px;
+}
+
+@media screen and (min-width: 769px) {
+  .user_auth {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .user_auth__login {
+    margin-bottom: 0px;
+  }
 }
 
 .user_auth__login,
