@@ -17,4 +17,7 @@ html {
   font-family: "Epilogue", serif;
   font-optical-sizing: auto;
   background-color: $almost_white;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
