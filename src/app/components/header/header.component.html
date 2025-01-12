@@ -1,4 +1,4 @@
-<ng-template #brand_logo>
+<section class="header">
   <div class="brand_logo">
     <div class="brand_logo__img_container">
       <img
@@ -8,32 +8,112 @@
       />
     </div>
   </div>
-</ng-template>
 
-<ng-template #mobile_header>
-  <section class="header">
-    <ng-container *ngTemplateOutlet="brand_logo"></ng-container>
-
-    <div class="menu_icon" (click)="toggle_sidemenu()">
-      <div class="menu_icon__icon_container">
+  <div class="navigation" *ngIf="check_device('desktop')">
+    <nav class="navigation__menu">
+      <li
+        class="navigation__item navigation__item--dropdown"
+        (click)="toggle_dropdown('features')"
+      >
+        <span> Features </span>
         <img
-          class="menu_icon__icon_content"
-          src="/assets/images/icon-menu.svg"
-          alt="menu icon"
+          class="navigation__arrow_down"
+          src="/assets/images/icon-arrow-down.svg"
+          alt="features arrow down icon"
         />
-      </div>
+
+        <div
+          class="modal_box"
+          *ngIf="check_device('desktop') && dropdown['features']"
+        >
+          <li class="navigation__item navigation__item--hidden">
+            <img
+              class="dropdown_menu__icon"
+              src="/assets/images/icon-todo.svg"
+              alt="todo icon"
+            />
+            <span class="dropdown_menu__title"> Todo List </span>
+          </li>
+
+          <li class="navigation__item navigation__item--hidden">
+            <img
+              class="dropdown_menu__icon"
+              src="/assets/images/icon-calendar.svg"
+              alt="calendar icon"
+            />
+            <span class="dropdown_menu__title"> Calendar </span>
+          </li>
+
+          <li class="navigation__item navigation__item--hidden">
+            <img
+              class="dropdown_menu__icon"
+              src="/assets/images/icon-reminders.svg"
+              alt="reminders icon"
+            />
+            <span class="dropdown_menu__title"> Reminder </span>
+          </li>
+
+          <li class="navigation__item navigation__item--hidden">
+            <img
+              class="dropdown_menu__icon"
+              src="/assets/images/icon-planning.svg"
+              alt="planning icon"
+            />
+            <span class="dropdown_menu__title"> Planning </span>
+          </li>
+        </div>
+      </li>
+
+      <li
+        class="navigation__item navigation__item--dropdown"
+        (click)="toggle_dropdown('company')"
+      >
+        <span>Company </span>
+        <img
+          class="navigation__arrow_down"
+          src="/assets/images/icon-arrow-down.svg"
+          alt="feature arrow down icon"
+        />
+
+        <div
+          class="modal_box"
+          *ngIf="check_device('desktop') && dropdown['company']"
+        >
+          <li class="navigation__item navigation__item--hidden">
+            <span>History </span>
+          </li>
+
+          <li class="navigation__item navigation__item--hidden">
+            <span>Our Team </span>
+          </li>
+
+          <li class="navigation__item navigation__item--hidden">
+            <span>Blog </span>
+          </li>
+        </div>
+      </li>
+
+      <li class="navigation__item">Careers</li>
+      <li class="navigation__item">About</li>
+    </nav>
+  </div>
+
+  <div
+    class="menu_icon"
+    (click)="toggle_sidemenu()"
+    *ngIf="check_device('mobile')"
+  >
+    <div class="menu_icon__icon_container">
+      <img
+        class="menu_icon__icon_content"
+        src="/assets/images/icon-menu.svg"
+        alt="menu icon"
+      />
     </div>
-  </section>
-</ng-template>
+  </div>
 
-<ng-template #desktop_header>
-  <section class="header">
-    <ng-container *ngTemplateOutlet="brand_logo"></ng-container>
-    <app-navigation></app-navigation>
-    <app-userauth-btns></app-userauth-btns>
-  </section>
-</ng-template>
-
-<ng-container
-  *ngTemplateOutlet="check_device('mobile') ? mobile_header : desktop_header"
-></ng-container>
+  <div class="user_auth" *ngIf="check_device('desktop')">
+    <div class="user_auth__login">Login</div>
+    <div class="user_auth__register">Register</div>
+  </div>
+</section>

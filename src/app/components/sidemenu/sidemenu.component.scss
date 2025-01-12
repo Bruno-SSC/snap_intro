@@ -1,4 +1,30 @@
 @import "variables.scss";
+@import "mixins.scss";
+
+.navigation__item {
+  @include nav_item;
+}
+
+.navigation__item--hidden {
+  padding-left: 30px;
+}
+
+.user_auth {
+  @include user_auth;
+}
+
+.user_auth__login {
+  @include user_auth__login;
+}
+
+.user_auth__register {
+  @include user_auth__register;
+}
+
+.user_auth__login,
+.user_auth__register {
+  @include user_auth__btns;
+}
 
 .side_menu {
   position: absolute;
