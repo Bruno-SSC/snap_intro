@@ -15,7 +15,7 @@ interface dropdown_menu {
 })
 export class SidemenuComponent {
   device: device_type = 'mobile';
-  menu_visible: boolean = false;
+  menu_visible: boolean = true;
   dropdown: dropdown_menu = {
     features: false,
     company: false,

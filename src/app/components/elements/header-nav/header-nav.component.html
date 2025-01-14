@@ -1,76 +1,34 @@
-<div class="navigation">
-  <nav class="navigation__menu">
-    <li class="navigation__item navigation__item--dropdown">
-      <span> Features </span>
-      <img
-        class="navigation__arrow_down"
-        src="/assets/images/icon-arrow-down.svg"
-        alt="features arrow down icon"
-      />
-
-      <div class="modal_box">
-        <li class="navigation__item navigation__item--hidden">
-          <img
-            class="dropdown_menu__icon"
-            src="/assets/images/icon-todo.svg"
-            alt="todo icon"
-          />
-          <span class="dropdown_menu__title"> Todo List </span>
-        </li>
-
-        <li class="navigation__item navigation__item--hidden">
-          <img
-            class="dropdown_menu__icon"
-            src="/assets/images/icon-calendar.svg"
-            alt="calendar icon"
-          />
-          <span class="dropdown_menu__title"> Calendar </span>
-        </li>
-
-        <li class="navigation__item navigation__item--hidden">
-          <img
-            class="dropdown_menu__icon"
-            src="/assets/images/icon-reminders.svg"
-            alt="reminders icon"
-          />
-          <span class="dropdown_menu__title"> Reminder </span>
-        </li>
-
-        <li class="navigation__item navigation__item--hidden">
-          <img
-            class="dropdown_menu__icon"
-            src="/assets/images/icon-planning.svg"
-            alt="planning icon"
-          />
-          <span class="dropdown_menu__title"> Planning </span>
-        </li>
+<div class="navigation_layout">
+  <ng-container *ngFor="let nav_item of nav_elements">
+    <div class="navigation_block">
+      <div
+        class="navigation_block__title"
+        (click)="toggle_dropdown(nav_item.title)"
+      >
+        <span> {{ nav_item.title }} </span>
+        <img
+          class="navigation__arrow_down"
+          src="/assets/images/icon-arrow-down.svg"
+          alt="features arrow down icon"
+        />
       </div>
-    </li>
 
-    <li class="navigation__item navigation__item--dropdown">
-      <span>Company </span>
-      <img
-        class="navigation__arrow_down"
-        src="/assets/images/icon-arrow-down.svg"
-        alt="feature arrow down icon"
-      />
-
-      <div class="modal_box">
-        <li class="navigation__item navigation__item--hidden">
-          <span>History </span>
-        </li>
-
-        <li class="navigation__item navigation__item--hidden">
-          <span>Our Team </span>
-        </li>
-
-        <li class="navigation__item navigation__item--hidden">
-          <span>Blog </span>
-        </li>
+      <div
+        class="navigation_block__modal_box"
+        *ngIf="nav_item.options && dropdown[nav_item.title]"
+      >
+        <ng-container *ngFor="let option of nav_item.options">
+          <li class="navigation_block__item navigation_block__item--hidden">
+            <img
+              *ngIf="option.icon_path"
+              class="dropdown_menu__icon"
+              src="/assets/images/{{ option.icon_path }}"
+              alt="todo icon"
+            />
+            <span class="dropdown_menu__title"> {{ option.name }} </span>
+          </li>
+        </ng-container>
       </div>
-    </li>
-
-    <li class="navigation__item">Careers</li>
-    <li class="navigation__item">About</li>
-  </nav>
+    </div>
+  </ng-container>
 </div>

@@ -1,7 +1,16 @@
+@import "variables.scss";
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100vw;
   padding: 20px;
+}
+
+@media screen and (min-width: $tablet_bp) {
+  .header {
+    justify-content: flex-start;
+    gap: 30px;
+  }
 }

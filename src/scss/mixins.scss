@@ -2,10 +2,7 @@
   width: 100%;
   text-align: center;
   font-size: 0.8rem;
-}
-
-@mixin user_auth__login {
-  margin-bottom: 10px;
+  gap: 10px;
 }
 
 @mixin user_auth__register {

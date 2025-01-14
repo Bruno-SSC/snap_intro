@@ -12,3 +12,5 @@ com5
     got rid of the ng-container/ng-template approach and focused on ngIf and styling only.
 com6
     finally achieved a decently looking arrange of mobile/desktop versions. Now I can focus on the styling for each block in both versions individually while making device-based layout changes solely on one component.
+com7
+    Implemented a dynamic rendering of the header_nav comp for the desktop version.

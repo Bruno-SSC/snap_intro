@@ -1,0 +1,32 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.navigation_layout {
+  display: flex;
+  gap: 30px;
+  padding: 0 30px;
+}
+
+.navigation_block {
+  position: relative;
+}
+
+.navigation_block__title {
+  @include nav_item;
+  padding-right: 0;
+}
+
+.navigation_block__modal_box {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background-color: $almost_white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 1px rgba($color: #000000, $alpha: 0.3);
+}
+
+.navigation_block__item {
+  @include nav_item;
+  white-space: nowrap;
+}

@@ -5,10 +5,6 @@
   @include user_auth;
 }
 
-.user_auth__login {
-  @include user_auth__login;
-}
-
 .user_auth__register {
   @include user_auth__register;
 }
@@ -16,4 +12,18 @@
 .user_auth__login,
 .user_auth__register {
   @include user_auth__btns;
+}
+
+@media screen and (min-width: $tablet_bp) {
+  :host {
+    width: 100%;
+  }
+
+  .user_auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    width: fit-content;
+  }
 }
