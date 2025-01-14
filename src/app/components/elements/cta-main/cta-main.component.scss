@@ -5,8 +5,8 @@
   padding: 20px 40px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
   align-items: center;
+  gap: 30px;
 }
 
 .CTA_message__title {
@@ -34,4 +34,36 @@
   padding: 15px 30px;
   color: $almost_white;
   border-radius: 15px;
+}
+
+@media screen and (min-width: $tablet_bp) {
+  :host {
+    width: 80%;
+  }
+
+  .CTA_message {
+    width: 100%;
+    align-items: start;
+    padding: 0;
+    gap: 40px;
+  }
+
+  .CTA_message__title {
+    font-size: 3rem;
+    padding: 0;
+    white-space: wrap;
+  }
+
+  // the "make" word
+  .CTA_message__title_focus {
+    display: block;
+    text-align: start;
+  }
+
+  .CTA_message__paragraph {
+    text-align: start;
+  }
+
+  .CTA_message__btn {
+  }
 }

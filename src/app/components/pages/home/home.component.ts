@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 
-import {
-  device_type,
-  StateManagerService,
-} from 'src/app/services/state-manager.service';
+import { StateManagerService } from 'src/app/services/state-manager.service';
+import { device_type } from 'src/app/utils/interfaces';
 
 @Component({
   selector: 'app-home',

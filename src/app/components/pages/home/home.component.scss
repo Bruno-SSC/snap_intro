@@ -5,12 +5,37 @@
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  padding: 20px;
+  padding: 20px 40px;
 }
 
 @media screen and (min-width: $tablet_bp) {
   .header {
+    height: 10vh;
     justify-content: flex-start;
     gap: 30px;
+  }
+
+  .main {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .main__lcol,
+  .main__rcol {
+    height: 70vh;
+  }
+
+  .main__lcol {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .main__rcol {
+    width: 40vw;
   }
 }
