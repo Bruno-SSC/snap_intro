@@ -1,0 +1,10 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.navigation__item {
+  @include nav_item;
+}
+
+.navigation__item--hidden {
+  @include nav_item;
+}

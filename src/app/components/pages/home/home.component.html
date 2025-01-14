@@ -1,0 +1,27 @@
+<ng-container *ngIf="is_device('desktop')">
+  <section class="header">
+    <app-brand-logo></app-brand-logo>
+    <app-header-nav></app-header-nav>
+    <app-user-authbtns></app-user-authbtns>
+  </section>
+
+  <section class="main">
+    <app-cta-main></app-cta-main>
+    <app-brand-strip></app-brand-strip>
+    <app-hero></app-hero>
+  </section>
+</ng-container>
+
+<ng-container *ngIf="is_device('mobile')">
+  <section class="header">
+    <app-brand-logo></app-brand-logo>
+    <app-menu-icon></app-menu-icon>
+  </section>
+
+  <section class="main">
+    <app-hero></app-hero>
+    <app-cta-main></app-cta-main>
+  </section>
+
+  <app-sidemenu></app-sidemenu>
+</ng-container>

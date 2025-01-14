@@ -10,3 +10,5 @@ com4
     Managed to implement the dropdown modal. Not sure if I like how I did it but it works for now.
 com5
     got rid of the ng-container/ng-template approach and focused on ngIf and styling only.
+com6
+    finally achieved a decently looking arrange of mobile/desktop versions. Now I can focus on the styling for each block in both versions individually while making device-based layout changes solely on one component.

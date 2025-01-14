@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderComponent } from './header.component';
+import { CtaMainComponent } from './cta-main.component';
 
-describe('HeaderComponent', () => {
-  let component: HeaderComponent;
-  let fixture: ComponentFixture<HeaderComponent>;
+describe('CtaMainComponent', () => {
+  let component: CtaMainComponent;
+  let fixture: ComponentFixture<CtaMainComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HeaderComponent]
+      declarations: [CtaMainComponent]
     });
-    fixture = TestBed.createComponent(HeaderComponent);
+    fixture = TestBed.createComponent(CtaMainComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { StateManagerService } from 'src/app/services/state-manager.service';
+import {
+  device_type,
+  StateManagerService,
+} from 'src/app/services/state-manager.service';
 
 interface dropdown_menu {
   [key: string]: boolean;
@@ -11,6 +14,7 @@ interface dropdown_menu {
   styleUrls: ['./sidemenu.component.scss'],
 })
 export class SidemenuComponent {
+  device: device_type = 'mobile';
   menu_visible: boolean = false;
   dropdown: dropdown_menu = {
     features: false,
@@ -21,6 +25,8 @@ export class SidemenuComponent {
     this.sm.menu_state.subscribe((value) => {
       this.menu_visible = value;
     });
+
+    sm.curr_device.subscribe((value) => (this.device = value));
   }
 
   toggle_dropdown(index: string) {
@@ -29,10 +35,5 @@ export class SidemenuComponent {
 
   close_menu() {
     this.sm.toggle_sidemenu();
-  }
-
-  check_device(type: string) {
-    const device = this.sm.retrieve_device();
-    return device == type;
   }
 }

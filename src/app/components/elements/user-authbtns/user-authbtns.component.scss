@@ -1,0 +1,19 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.user_auth {
+  @include user_auth;
+}
+
+.user_auth__login {
+  @include user_auth__login;
+}
+
+.user_auth__register {
+  @include user_auth__register;
+}
+
+.user_auth__login,
+.user_auth__register {
+  @include user_auth__btns;
+}

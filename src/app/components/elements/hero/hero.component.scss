@@ -1,0 +1,14 @@
+@import "variables.scss";
+
+.hero_img {
+  width: 100vw;
+}
+
+.hero_img__container {
+  width: 100%;
+}
+
+.hero_img__content {
+  width: 100%;
+  object-fit: cover;
+}
