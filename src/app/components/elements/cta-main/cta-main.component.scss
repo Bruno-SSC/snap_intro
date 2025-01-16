@@ -38,7 +38,7 @@
 
 @media screen and (min-width: $tablet_bp) {
   :host {
-    width: 80%;
+    width: 100%;
   }
 
   .CTA_message {
@@ -49,9 +49,11 @@
   }
 
   .CTA_message__title {
-    font-size: 3rem;
+    text-align: start;
+    font-size: 4rem;
+    width: 100%;
+    white-space: nowrap;
     padding: 0;
-    white-space: wrap;
   }
 
   // the "make" word
@@ -61,9 +63,8 @@
   }
 
   .CTA_message__paragraph {
+    font-size: 1rem;
     text-align: start;
-  }
-
-  .CTA_message__btn {
+    line-height: 1.5rem;
   }
 }

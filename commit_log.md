@@ -16,3 +16,6 @@ com7
     Implemented a dynamic rendering of the header_nav comp for the desktop version.
 com8
     almost finishing the main desktop barebones styling. Very unresponsive and the brand_strip is not properly positioned yet.
+com9
+    Just recording some progress on the main desktop styling. overal adjusts.
+

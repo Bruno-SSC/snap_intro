@@ -19,13 +19,12 @@
 
 @mixin nav_item {
   padding: 10px;
-  font-size: 0.9rem;
   color: $medium_gray;
   font-weight: 500;
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 @mixin nav_item--hid {

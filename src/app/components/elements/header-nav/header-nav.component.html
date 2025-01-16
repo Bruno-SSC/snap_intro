@@ -5,7 +5,7 @@
         class="navigation_block__title"
         (click)="toggle_dropdown(nav_item.title)"
       >
-        <span> {{ nav_item.title }} </span>
+        <span> {{ nav_item.title | titlecase  }} </span>
         <img
           class="navigation__arrow_down"
           src="/assets/images/icon-arrow-down.svg"
