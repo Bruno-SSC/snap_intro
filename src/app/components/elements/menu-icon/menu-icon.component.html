@@ -1,8 +1,11 @@
-<div class="menu_icon">
+<div
+  [ngClass]="{ menu_icon: true, 'menu_icon--close': menu_visible }"
+  (click)="toggle_sidemenu()"
+>
   <div class="menu_icon__icon_container">
     <img
       class="menu_icon__icon_content"
-      src="/assets/images/icon-menu.svg"
+      [src]="imgs_path + set_icon()"
       alt="menu icon"
     />
   </div>

@@ -13,7 +13,8 @@ interface dropdown_menu {
 })
 export class SidemenuComponent {
   device: device_type = 'mobile';
-  menu_visible: boolean = true;
+  menu_visible: boolean = false;
+  
   dropdown: dropdown_menu = {
     features: false,
     company: false,
@@ -29,9 +30,5 @@ export class SidemenuComponent {
 
   toggle_dropdown(index: string) {
     this.dropdown[index] = !this.dropdown[index];
-  }
-
-  close_menu() {
-    this.sm.toggle_sidemenu();
   }
 }

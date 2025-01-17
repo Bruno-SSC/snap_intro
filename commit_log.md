@@ -18,4 +18,9 @@ com8
     almost finishing the main desktop barebones styling. Very unresponsive and the brand_strip is not properly positioned yet.
 com9
     Just recording some progress on the main desktop styling. overal adjusts.
+com10
+    It's basically finished, only lacks animation and fixing some details. Although, I feel like something is wrong. For instance, the desktop version has a portrait hero while the mobile has a landscape.
+    I've switched them because I must work with the right proportions, otherwise the image will either be clipped or generate white space (not cover).
+    This is why I think there is something wrong with the design or I did something excedingly bad at some point and have been building on top of that error up to now.
+    At any case, I'm unmotivaded about it. 
 

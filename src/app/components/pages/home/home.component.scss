@@ -5,6 +5,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100vw;
+  height: 10vh;
   padding: 20px 40px;
 }
 
@@ -20,7 +21,7 @@
   .main {
     display: flex;
     justify-content: center;
-    gap: 60px;
+    padding: 0 100px;
   }
 
   .main__lcol,
@@ -30,16 +31,18 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 40px;
+    padding: 40px 0;
   }
 
   .main__lcol {
-    padding: 80px 40px 0 40px;
+    justify-content: space-evenly;
+    padding: 80px 40px 0 0;
     gap: 60px;
-    width: 60vw;
+    width: 50vw;
   }
 
   .main__rcol {
-    width: 40vw;
+    width: 50vw;
+    overflow: hidden;
   }
 }
