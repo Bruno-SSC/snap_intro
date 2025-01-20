@@ -20,7 +20,7 @@ These are the requirements for this project from frontendMentor challenges:
 
 - > [FrontendMentor Challenge Page](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5)
 
-- > [Live Project Link](https://snapintro.netlify.com)
+- > [Live Project Link](https://snapintro.netlify.app)
 
 ## Goal 📌 
 

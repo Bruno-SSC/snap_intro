@@ -23,5 +23,7 @@ com10
     I've switched them because I must work with the right proportions, otherwise the image will either be clipped or generate white space (not cover).
 com11
     Just prepared for publishing.
+com12
+    just change live link on readme.
    
 
