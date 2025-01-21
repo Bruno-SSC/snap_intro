@@ -39,13 +39,9 @@
 }
 
 @media screen and (min-width: $tablet_bp) {
-  :host {
-    width: 100%;
-  }
-
   .CTA_message {
-    width: 100%;
     align-items: start;
+    width: 100%;
     padding: 0;
     gap: 40px;
     font-size: 1vw;
@@ -53,7 +49,7 @@
 
   .CTA_message__title {
     text-align: start;
-    font-size: 3em;
+    font-size: 4em;
     width: 100%;
     white-space: nowrap;
     padding: 0;

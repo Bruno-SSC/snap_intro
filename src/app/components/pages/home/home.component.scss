@@ -9,6 +9,11 @@
   padding: 20px 40px;
 }
 
+.main {
+  height: fit-content;
+  padding-bottom: 50px;
+}
+
 @media screen and (max-width: $tablet_bp) {
   .main {
     display: flex;
@@ -27,29 +32,30 @@
   }
 
   .main {
-    display: flex;
-    justify-content: center;
+    height: 80vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
     padding: 0 100px;
   }
 
-  .main__lcol,
-  .main__rcol {
-    height: 90vh;
+  app-cta-main {
+    grid-row: 1;
+    grid-column: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 40px 0;
+    justify-content: center;
   }
 
-  .main__lcol {
-    justify-content: space-evenly;
-    padding: 80px 40px 0 0;
-    width: 50vw;
+  app-brand-strip {
+    grid-row: 2;
+    grid-column: 1;
   }
 
-  .main__rcol {
-    width: 50vw;
-    overflow: hidden;
+  app-hero {
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
   }
 }

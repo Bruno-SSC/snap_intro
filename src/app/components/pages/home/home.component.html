@@ -7,6 +7,7 @@
   <section class="main" @main_anim>
     <app-hero></app-hero>
     <app-cta-main></app-cta-main>
+    <app-brand-strip></app-brand-strip>
   </section>
 
   <app-sidemenu></app-sidemenu>
@@ -20,12 +21,8 @@
   </section>
 
   <section class="main" @main_anim>
-    <div class="main__lcol">
-      <app-cta-main></app-cta-main>
-      <app-brand-strip></app-brand-strip>
-    </div>
-    <div class="main__rcol">
-      <app-hero [device]="device"></app-hero>
-    </div>
+    <app-cta-main></app-cta-main>
+    <app-brand-strip></app-brand-strip>
+    <app-hero [device]="device"></app-hero>
   </section>
 </ng-container>

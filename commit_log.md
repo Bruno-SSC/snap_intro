@@ -27,5 +27,7 @@ com12
     just change live link on readme.
 com13
     Refactored some code, fixed some styling and added animations.
+com14
+    Rewrited the home styling with grid + possibly a few small changes here and there.
    
 
