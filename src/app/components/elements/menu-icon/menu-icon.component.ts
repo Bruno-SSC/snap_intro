@@ -13,6 +13,7 @@ export class MenuIconComponent {
   constructor(private sm: StateManagerService) {
     this.sm.menu_state.subscribe((value) => {
       this.menu_visible = value;
+      // ! why value keeps increasing?
     });
   }
 

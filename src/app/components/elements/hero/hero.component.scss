@@ -1,16 +1,16 @@
 @import "variables.scss";
 
-.hero_img {
-  width: 100vw;
-}
+@media screen and (max-width: $tablet_bp) {
+  .hero_img__container {
+    height: 50vh;
+    width: 100vw;
+  }
 
-.hero_img__container {
-  width: 100%;
-}
-
-.hero_img__content {
-  width: 100%;
-  object-fit: cover;
+  .hero_img__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 @media screen and (min-width: $tablet_bp) {

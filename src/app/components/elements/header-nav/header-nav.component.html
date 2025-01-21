@@ -5,8 +5,9 @@
         class="navigation_block__title"
         (click)="toggle_dropdown(nav_item.title)"
       >
-        <span> {{ nav_item.title | titlecase  }} </span>
+        <span> {{ nav_item.title | titlecase }} </span>
         <img
+          *ngIf="nav_item.options"
           class="navigation__arrow_down"
           src="/assets/images/icon-arrow-down.svg"
           alt="features arrow down icon"
@@ -16,6 +17,7 @@
       <div
         class="navigation_block__modal_box"
         *ngIf="nav_item.options && dropdown[nav_item.title]"
+        @item_fade
       >
         <ng-container *ngFor="let option of nav_item.options">
           <li class="navigation_block__item navigation_block__item--hidden">

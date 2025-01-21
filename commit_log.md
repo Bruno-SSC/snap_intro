@@ -25,5 +25,7 @@ com11
     Just prepared for publishing.
 com12
     just change live link on readme.
+com13
+    Refactored some code, fixed some styling and added animations.
    
 

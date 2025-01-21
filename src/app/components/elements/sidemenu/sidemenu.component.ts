@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { StateManagerService } from 'src/app/services/state-manager.service';
+import { item_fade, menu_slide, resize } from 'src/app/utils/animations';
 import { device_type } from 'src/app/utils/interfaces';
+import { nav_elements } from 'src/app/utils/nav_items';
 
 interface dropdown_menu {
   [key: string]: boolean;
@@ -10,11 +12,14 @@ interface dropdown_menu {
   selector: 'app-sidemenu',
   templateUrl: './sidemenu.component.html',
   styleUrls: ['./sidemenu.component.scss'],
+  animations: [menu_slide, item_fade, resize],
 })
 export class SidemenuComponent {
   device: device_type = 'mobile';
   menu_visible: boolean = false;
-  
+  nav_itens = nav_elements;
+  imgs_path: string = '/assets/images/';
+
   dropdown: dropdown_menu = {
     features: false,
     company: false,

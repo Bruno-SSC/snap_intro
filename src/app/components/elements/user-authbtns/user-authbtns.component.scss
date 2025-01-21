@@ -2,16 +2,24 @@
 @import "mixins.scss";
 
 .user_auth {
-  @include user_auth;
+  width: 100%;
+  text-align: center;
+  font-size: 1vh;
+  gap: 10px;
 }
 
 .user_auth__register {
-  @include user_auth__register;
+  border: 2px solid $medium_gray;
 }
 
 .user_auth__login,
 .user_auth__register {
-  @include user_auth__btns;
+  padding: 10px;
+  width: 100%;
+  color: $medium_gray;
+  font-weight: 500;
+  border-radius: 15px;
+  font-size: 1em;
 }
 
 @media screen and (min-width: $tablet_bp) {
@@ -25,5 +33,12 @@
     align-items: center;
     margin-left: auto;
     width: fit-content;
+    font-size: 1vw;
+  }
+
+  .user_auth__login,
+  .user_auth__register {
+    font-size: 0.8em;
+    cursor: pointer;
   }
 }

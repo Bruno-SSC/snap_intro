@@ -1,13 +1,33 @@
 @import "variables.scss";
 
-.brand_logo__img_container {
-  margin-top: 8px;
-  width: 5rem;
-  height: 2rem  ;
+@media screen and (max-width: $tablet_bp) {
+  .brand_logo {
+    font-size: 2vh;
+  }
+
+  .brand_logo__img_container {
+    margin-top: 8px;
+    height: 2em;
+  }
+
+  .brand_logo__img_content {
+    height: 100%;
+    object-fit: contain;
+  }
 }
 
-.brand_logo__img_content {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+@media screen and (min-width: $tablet_bp) {
+  .brand_logo {
+    font-size: 2vw;
+  }
+
+  .brand_logo__img_container {
+    margin-top: 8px;
+    width: 2em;
+  }
+
+  .brand_logo__img_content {
+    width: 100%;
+    object-fit: contain;
+  }
 }

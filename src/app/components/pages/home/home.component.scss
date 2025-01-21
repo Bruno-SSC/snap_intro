@@ -9,6 +9,14 @@
   padding: 20px 40px;
 }
 
+@media screen and (max-width: $tablet_bp) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+  }
+}
+
 @media screen and (min-width: $tablet_bp) {
   .header {
     height: 10vh;

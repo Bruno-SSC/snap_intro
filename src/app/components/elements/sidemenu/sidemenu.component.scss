@@ -1,29 +1,9 @@
 @import "variables.scss";
 @import "mixins.scss";
 
-.navigation__item {
-  @include nav_item;
-  font-size: 1.2rem;
-}
-
-.navigation__item--hidden {
-  padding-left: 30px;
-}
-
-.user_auth {
-  @include user_auth;
-}
-
-.user_auth__register {
-  @include user_auth__register;
-}
-
-.user_auth__login,
-.user_auth__register {
-  @include user_auth__btns;
-}
-
 .side_menu {
+  font-size: 2vh;
+
   position: absolute;
   top: 0;
   right: 0;
@@ -35,4 +15,41 @@
   flex-direction: column;
   gap: 10px;
   padding: 20px;
+}
+
+.navigation__item {
+  padding: 10px;
+  color: $medium_gray;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8em;
+  font-size: 1em;
+}
+
+.navigation__item--hidden {
+  padding-left: 30px;
+}
+
+.user_auth {
+  width: 100%;
+  text-align: center;
+  font-size: 1vh;
+  gap: 10px;
+  font-size: 0.9em;
+}
+
+.user_auth__register {
+  border: 2px solid $medium_gray;
+}
+
+.user_auth__login,
+.user_auth__register {
+  padding: 10px;
+  width: 100%;
+  color: $medium_gray;
+  font-weight: 500;
+  border-radius: 15px;
+  font-size: 1em;
 }

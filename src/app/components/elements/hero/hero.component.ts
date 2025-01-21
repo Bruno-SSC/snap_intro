@@ -15,7 +15,7 @@ export class HeroComponent {
   }
 
   set_src(): string {
-    if (this.device == 'mobile') return '/assets/images/image-hero-desktop.png';
-    else return '/assets/images/image-hero-mobile.png';
+    if (this.device == 'mobile') return '/assets/images/image-hero-mobile.png';
+    else return '/assets/images/image-hero-desktop.png';
   }
 }

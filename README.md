@@ -2,11 +2,7 @@
 
 ## Status 🔧
 
-I would like to rewrite and clean some of the code before fixing small details that feel wrong and add animations to make it prettier. 
-
-However, I'm currently not working on this project anymore. I've grown unmotivated. Probably because it's a simple small webpage but I did some time expensive/stressful mistakes along the way.
-
-I would stick here and take my time fixing everything to my liking or just drop it and start something fresh. I've choosen the former.
+There is always improvements to be made but overal the project is finished. Just for instance, one of the improvements would be acessibility indexes. I might do it in the future.
 
 ## Requirements 📄
 
@@ -14,7 +10,7 @@ These are the requirements for this project from frontendMentor challenges:
 
 - View the relevant dropdown menus on desktop and mobile when interacting with the navigation links
 - View the optimal layout for the content depending on their device's screen size
-- See hover states for all interactive elements on the page (haven't done this)
+- See hover states for all interactive elements on the page 
 
 ## Alerts ⚡
 

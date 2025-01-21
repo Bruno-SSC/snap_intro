@@ -4,6 +4,7 @@
 .navigation_layout {
   display: flex;
   gap: 30px;
+  font-size: 1vw;
 }
 
 .navigation_block {
@@ -11,8 +12,15 @@
 }
 
 .navigation_block__title {
-  @include nav_item;
+  padding: 10px;
+  color: $medium_gray;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8em;
   padding-right: 0;
+  cursor: pointer;
 }
 
 .navigation_block__modal_box {
@@ -26,6 +34,13 @@
 }
 
 .navigation_block__item {
-  @include nav_item;
+  padding: 10px;
+  color: $medium_gray;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8em;
   white-space: nowrap;
+  cursor: pointer;
 }
