@@ -12,6 +12,12 @@ import {
 
 const shrink = [animate('300ms ease-in'), style({ height: 0 })];
 
+const grow = [
+  style({ height: '0px' }),
+  animate('300ms ease-in'),
+  style({ height: '*' }),
+];
+
 const move_in = [
   style({ transform: 'translateX(100vw)' }),
   animate('600ms ease-in'),
@@ -58,12 +64,10 @@ export const item_fade = trigger('item_fade', [
 
 export const resize = trigger('resize', [
   transition(':enter', [
-    query('.navigation__item', style({ opacity: 0, padding: 0 })),
+    query('.navigation__item--hidden', style({ opacity: 0 })),
+    query(':self', grow),
     query('.navigation__item', [
-      stagger('100ms', [
-        ...fade_in,
-        style({ padding: '10px', 'padding-left': '30px' }),
-      ]),
+      stagger('100ms', [animate('600ms ease'), style({ opacity: 1 })]),
     ]),
   ]),
   transition(':leave', [

@@ -29,5 +29,7 @@ com13
     Refactored some code, fixed some styling and added animations.
 com14
     Rewrited the home styling with grid + possibly a few small changes here and there.
+com15
+    Improving animations at the sidemenu but got stuck with an annoying bug where once the grow animation of the dropdown container end (or seems like ends) it snaps (grows a little bigger quick).
    
 

@@ -19,11 +19,7 @@ export class SidemenuComponent {
   menu_visible: boolean = false;
   nav_itens = nav_elements;
   imgs_path: string = '/assets/images/';
-
-  dropdown: dropdown_menu = {
-    features: false,
-    company: false,
-  };
+  dropdown: dropdown_menu = {};
 
   constructor(private sm: StateManagerService) {
     this.sm.menu_state.subscribe((value) => {
