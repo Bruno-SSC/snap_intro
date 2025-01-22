@@ -31,5 +31,5 @@ com14
     Rewrited the home styling with grid + possibly a few small changes here and there.
 com15
     Improving animations at the sidemenu but got stuck with an annoying bug where once the grow animation of the dropdown container end (or seems like ends) it snaps (grows a little bigger quick).
-   
-
+com16
+    fixed a subscription memory leak, added a listener to change device without reloads, fixed the "grow" animation annoying bug and possibly more minor changes.

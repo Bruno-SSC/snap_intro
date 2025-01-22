@@ -15,8 +15,13 @@ export class HomeComponent {
   menu_visible: boolean = false;
 
   constructor(private sm: StateManagerService) {
-    this.sm.curr_device.subscribe((value) => (this.device = value));
-    this.sm.menu_state.subscribe((value) => (this.menu_visible = value));
+    this.sm.curr_device.subscribe((value) => {
+      this.device = value;
+    });
+
+    this.sm.menu_state.subscribe((value) => {
+      this.menu_visible = value;
+    });
   }
 
   is_device(type: string): boolean {

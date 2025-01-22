@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Subject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { device_type } from '../utils/interfaces';
 
 @Injectable({
@@ -10,8 +10,21 @@ export class StateManagerService {
   curr_device = new BehaviorSubject<device_type>('mobile');
 
   constructor() {
-    if (window.innerWidth > 480) this.curr_device.next('tablet');
-    if (window.innerWidth > 769) this.curr_device.next('desktop');
+    this.check_device();
+    window.addEventListener('resize', () => {
+      this.check_device();
+    });
+  }
+
+  check_device() {
+    let new_device: device_type;
+
+    if (window.innerWidth > 769) new_device = 'desktop';
+    else new_device = 'mobile';
+
+    if (new_device != this.curr_device.getValue()) {
+      this.curr_device.next(new_device);
+    }
   }
 
   toggle_sidemenu() {
